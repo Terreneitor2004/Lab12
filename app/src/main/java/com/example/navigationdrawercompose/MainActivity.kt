@@ -35,7 +35,16 @@ fun ColorMixerApp() {
         modifier = Modifier.fillMaxSize().padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
+        Text(
+            text = "Color Mixer",
+            style = MaterialTheme.typography.headlineMedium,
+            modifier = Modifier.padding(bottom = 16.dp)
+        )
+        Box(
+            modifier = Modifier
+                .size(200.dp)
+                .background(color)
+        )
         Spacer(modifier = Modifier.height(16.dp))
 
         ColorSlider("Red", red, Color.Red) { red = it }
